@@ -4,7 +4,7 @@ author: "Finsoft - SAP Finans Donusum Uzmanlari"
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
@@ -15,7 +15,7 @@ body {
     background-color: #ffffff;
 }
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Outfit', sans-serif;
     color: #0f172a;
 }
 .cover-page {
@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
     color: #0f172a;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 }
 .cover-subtitle {
     font-size: 1.6rem;
@@ -51,24 +51,38 @@ h1, h2, h3, h4 {
 .cover-author {
     margin-top: auto;
     margin-bottom: 5vh;
-    color: #64748b;
-    font-style: italic;
+    color: #2E7D32;
+    font-weight: 500;
     font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .cover-accent {
-    width: 80px;
-    height: 4px;
-    background-color: #16a34a;
+    width: 100px;
+    height: 6px;
+    background: linear-gradient(90deg, #1B5E20, #43A047, #81C784);
     margin: 40px auto;
+    border-radius: 3px;
 }
 h2 {
     font-size: 2.2rem;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 3px solid #e2e8f0;
     padding-bottom: 12px;
     margin-top: 50px;
     margin-bottom: 25px;
-    color: #1e293b;
+    color: #0f172a;
+    font-weight: 700;
     page-break-before: always;
+    position: relative;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #43A047;
 }
 h2:first-of-type {
     page-break-before: auto;
@@ -93,33 +107,45 @@ strong {
     color: #0f172a;
 }
 .highlight-box {
-    background-color: #f8fafc;
-    border-left: 4px solid #16a34a;
-    padding: 24px;
-    margin: 35px 0;
-    border-radius: 0 8px 8px 0;
+    background: linear-gradient(to right, #f4fbf6, #ffffff);
+    border-left: 4px solid #43A047;
+    padding: 24px 30px;
+    margin: 40px 0;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 .highlight-box p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-style: italic;
-    color: #334155;
+    font-weight: 500;
+    color: #1B5E20;
     text-align: left;
+    line-height: 1.6;
 }
 .doc-footer {
     margin-top: 80px;
-    padding-top: 40px;
-    border-top: 1px solid #e2e8f0;
+    padding: 60px 40px;
+    background-color: #0f172a;
+    color: #f8fafc;
     text-align: center;
     page-break-before: always;
+    border-radius: 12px;
 }
 .doc-footer h3 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 .doc-footer p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+.doc-footer strong {
+    color: #43A047;
 }
 </style>
 
