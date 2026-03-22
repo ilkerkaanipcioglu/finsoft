@@ -71,7 +71,7 @@ export const translations = {
     tlBadge: 'THOUGHT LEADERSHIP',
     tlTitle: 'CFO\'nun Dönüşüm Ajandası',
     tlDesc: 'Sınıfının en iyisi finansal operasyonların nasıl kurulduğunu, yapay zeka entegrasyonlarını ve %40\'a varan zaman tasarrufunun mimarisini özel yayınımızda keşfedin.',
-    tlBtn: 'Kitabı İndirin (PDF)',
+    tlBtn: 'Dokümanı İndirin (PDF)',
     tlBookTitle: 'Yapay Zeka Destekli Finans: Sınır Ötesi Operasyonlar',
     tlBookDesc: '3 Ayda SAP FI Dönüşümü ve Uçtan Uca Maliyet Tasarrufu Vaka Analizleri.',
 
@@ -242,7 +242,7 @@ export const translations = {
     tlBadge: 'THOUGHT LEADERSHIP',
     tlTitle: 'The CFO\'s Transformation Agenda',
     tlDesc: 'Discover how best-in-class financial operations are built, AI integrations are managed, and architectures delivering up to 40% time savings are deployed in our exclusive publication.',
-    tlBtn: 'Download the Book (PDF)',
+    tlBtn: 'Download Document (PDF)',
     tlBookTitle: 'AI-Driven Finance: Cross-Border Operations',
     tlBookDesc: '3-Month SAP FI Transformation and End-to-End Cost Savings Case Studies.',
 
