@@ -1,14 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { t } from '../../i18n/utils';
 const lang = 'en' as const;
 ---
 <Layout title="Contact" lang={lang}>
-    <section class="py-32 px-12 bg-surface">
+    <section class="py-24 md:py-32 px-12 bg-surface">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-                <h1 class="display-lg text-5xl font-bold font-headline mb-6">{t('contactTitle', lang)}</h1>
-                <p class="text-xl text-on-surface-variant mb-12">{t('contactDesc', lang)}</p>
+                <h1 class="display-lg text-5xl font-semibold font-headline mb-6">Let's Evaluate the Right Approach</h1>
+                <p class="text-xl text-on-surface-variant mb-12">Let's map out the most accurate financial transformation strategy tailored for you. Get in touch to discuss your corporate SAP and AI-driven finance objectives.</p>
                 
                 <ul class="space-y-6">
                     <li class="flex items-center gap-4">
@@ -16,8 +15,8 @@ const lang = 'en' as const;
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
                         <div>
-                            <h4 class="font-bold">{t('contactAddress', lang)}</h4>
-                            <p class="text-on-surface-variant text-sm">Barbaros Mah. Mor Sümbül Sok. 5/A Deluxia Palace D:223 Ataşehir, İSTANBUL</p>
+                            <h4 class="font-semibold">Address</h4>
+                            <p class="text-on-surface-variant text-sm">Barbaros Mah. Mor Sumbul Sok. 5/A Deluxia Palace D:223 Atasehir, ISTANBUL</p>
                         </div>
                     </li>
                     <li class="flex items-center gap-4">
@@ -25,7 +24,7 @@ const lang = 'en' as const;
                             <span class="material-symbols-outlined">call</span>
                         </div>
                         <div>
-                            <h4 class="font-bold">{t('contactPhone', lang)}</h4>
+                            <h4 class="font-semibold">Phone</h4>
                             <p class="text-on-surface-variant text-sm">+90 216 504 25 14</p>
                         </div>
                     </li>
@@ -34,7 +33,7 @@ const lang = 'en' as const;
                             <span class="material-symbols-outlined">mail</span>
                         </div>
                         <div>
-                            <h4 class="font-bold">{t('contactEmail', lang)}</h4>
+                            <h4 class="font-semibold">Email</h4>
                             <p class="text-on-surface-variant text-sm">info@finsoft.com.tr</p>
                         </div>
                     </li>
@@ -45,32 +44,32 @@ const lang = 'en' as const;
                 <form class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-bold mb-2">{t('contactFormName', lang)}</label>
-                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormNamePh', lang)}>
+                            <label class="block text-sm font-semibold mb-2">Full Name</label>
+                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Your Name">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold mb-2">{t('contactFormCompany', lang)}</label>
-                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormCompanyPh', lang)}>
+                            <label class="block text-sm font-semibold mb-2">Company</label>
+                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Your Company">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">{t('contactFormEmail', lang)}</label>
-                        <input type="email" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormEmailPh', lang)}>
+                        <label class="block text-sm font-semibold mb-2">Corporate Email</label>
+                        <input type="email" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="corporate@email.com">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">{t('contactFormType', lang)}</label>
+                        <label class="block text-sm font-semibold mb-2">Project Type</label>
                         <select class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none">
-                            <option>{t('contactFormOpt1', lang)}</option>
-                            <option>{t('contactFormOpt2', lang)}</option>
-                            <option>{t('contactFormOpt3', lang)}</option>
-                            <option>{t('contactFormOpt4', lang)}</option>
+                            <option>Global Rollout — Turkey Localization</option>
+                            <option>Global Rollout — International Operations</option>
+                            <option>SAP FI/CO Consulting</option>
+                            <option>SAP S/4HANA Migration</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">{t('contactFormMsg', lang)}</label>
-                        <textarea rows="4" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormMsgPh', lang)}></textarea>
+                        <label class="block text-sm font-semibold mb-2">Message</label>
+                        <textarea rows="4" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Briefly describe your project details..."></textarea>
                     </div>
-                    <button type="button" class="w-full bg-primary text-on-primary py-4 rounded-md font-bold hover:bg-primary-container transition-colors">{t('contactFormSubmit', lang)}</button>
+                    <button type="button" class="w-full bg-primary text-on-primary py-4 rounded-md font-semibold hover:shadow-lg transition-all translateY(-4px) duration-300">Submit Inquiry</button>
                 </form>
             </div>
         </div>
