@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hizmetler | Finsoft SAP Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#3c4a42",
+              "on-tertiary-container": "#711419",
+              "surface-container-low": "#f2f3ff",
+              "primary-fixed-dim": "#4edea3",
+              "surface-container": "#eaedff",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#005236",
+              "inverse-primary": "#4edea3",
+              "surface-container-highest": "#dae2fd",
+              "surface": "#faf8ff",
+              "on-secondary-fixed-variant": "#3f465c",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#131b2e",
+              "secondary": "#565e74",
+              "tertiary-container": "#fc7c78",
+              "tertiary-fixed": "#ffdad7",
+              "background": "#faf8ff",
+              "surface-container-high": "#e2e7ff",
+              "on-secondary-container": "#5c647a",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "outline-variant": "#bbcabf",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#eef0ff",
+              "on-primary-container": "#00422b",
+              "primary-fixed": "#6ffbbe",
+              "on-surface": "#131b2e",
+              "on-tertiary-fixed-variant": "#842225",
+              "on-primary-fixed": "#002113",
+              "surface-tint": "#006c49",
+              "on-tertiary-fixed": "#410005",
+              "primary-container": "#10b981",
+              "outline": "#6c7a71",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#dae2fd",
+              "inverse-surface": "#283044",
+              "tertiary": "#a43a3a",
+              "surface-bright": "#faf8ff",
+              "surface-variant": "#dae2fd",
+              "surface-dim": "#d2d9f4",
+              "tertiary-fixed-dim": "#ffb3af",
+              "secondary-fixed-dim": "#bec6e0",
+              "on-secondary-fixed": "#131b2e",
+              "secondary-container": "#dae2fd",
+              "primary": "#006c49"
+            },
+            fontFamily: {
+              "headline": ["IBM Plex Sans", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- Section 1: TopNavBar (Glassmorphic) -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md transition-all">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-headline">Finsoft</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-700 dark:text-slate-300 hover:text-emerald-500 transition-colors duration-200 text-sm font-medium" href="#">Ana Sayfa</a>
+<a class="text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-600 pb-1 text-sm font-medium" href="#">Hizmetler</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-emerald-500 transition-colors duration-200 text-sm font-medium" href="#">Uzmanlık</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-emerald-500 transition-colors duration-200 text-sm font-medium" href="#">Global Projeler</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-emerald-500 transition-colors duration-200 text-sm font-medium" href="#">Hakkımızda</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-emerald-500 transition-colors duration-200 text-sm font-medium" href="#">İletişim</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center text-xs font-semibold tracking-wider">
+<span class="text-emerald-600 cursor-pointer">TR</span>
+<span class="mx-2 text-outline-variant">|</span>
+<span class="text-slate-400 hover:text-slate-600 cursor-pointer transition-colors">EN</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-md text-sm font-medium hover:bg-primary-container transition-all active:scale-95 duration-150">
+                    Projenizi Konuşalım
+                </button>
+</div>
+</div>
+</nav>
+<!-- Section 2: HERO -->
+<section class="relative pt-40 pb-24 bg-on-background overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="w-full md:w-3/4">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary-container/20 text-primary-fixed border border-primary-container/30 text-xs font-bold tracking-widest mb-8 uppercase">
+                    SAP UZMANLIK HİZMETLERİ
+                </span>
+<h1 class="text-5xl md:text-7xl font-bold font-headline text-white leading-tight tracking-tight mb-8">
+                    Finansal Sistemlerinizi<br/><span class="text-primary-container">Baştan Tasarlıyoruz.</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed mb-16">
+                    SAP FI/CO, S/4HANA dönüşüm süreçleri ve Türkiye lokalizasyonu konusunda derin teknik bilgiyle işletmenizi geleceğe hazırlıyoruz.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white/5 border border-white/10 p-8 rounded-md backdrop-blur-sm group hover:border-primary-container/50 transition-all">
+<div class="text-4xl font-bold text-white mb-2 font-headline group-hover:text-primary-container transition-colors">7</div>
+<div class="text-sm font-medium text-slate-400 tracking-wider uppercase">Hizmet Kategorisi</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-md backdrop-blur-sm group hover:border-primary-container/50 transition-all">
+<div class="text-4xl font-bold text-white mb-2 font-headline group-hover:text-primary-container transition-colors">15+</div>
+<div class="text-sm font-medium text-slate-400 tracking-wider uppercase">Yıllık Tecrübe</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-md backdrop-blur-sm group hover:border-primary-container/50 transition-all">
+<div class="text-4xl font-bold text-white mb-2 font-headline group-hover:text-primary-container transition-colors">7/24</div>
+<div class="text-sm font-medium text-slate-400 tracking-wider uppercase">Teknik Destek</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+</section>
+<!-- Section 3: SERVICES BENTO GRID -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl font-bold font-headline text-on-background mb-4">Hizmet Alanlarımız</h2>
+<div class="h-1.5 w-24 bg-primary"></div>
+</div>
+<p class="text-on-secondary-container max-w-md text-sm leading-relaxed">
+                    Kurumsal kaynak planlama süreçlerinizde verimliliği artırmak için özelleştirilmiş finansal modül çözümleri.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+<!-- Card 1: FI (Large) -->
+<div class="md:col-span-8 md:row-span-2 bg-primary p-10 rounded-md flex flex-col justify-between text-white relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-5xl mb-6">account_balance</span>
+<h3 class="text-3xl font-bold font-headline mb-6">SAP Finansal Muhasebe (FI)</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-white/80 text-sm">
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+<span>Defter-i Kebir (GL) Süreçleri</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+<span>Borçlar &amp; Alacaklar Muhasebesi</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+<span>Banka Hesap Yönetimi</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+<span>Vergi Yönetimi &amp; E-Çözümler</span>
+</div>
+</div>
+</div>
+<div class="mt-8 flex flex-wrap gap-3 relative z-10">
+<span class="px-3 py-1 bg-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase">New GL</span>
+<span class="px-3 py-1 bg-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase">TRM</span>
+<span class="px-3 py-1 bg-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase">FI-AA</span>
+<span class="px-3 py-1 bg-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase">MT940</span>
+</div>
+<div class="absolute bottom-0 right-0 opacity-10 translate-x-1/4 translate-y-1/4">
+<span class="material-symbols-outlined text-[300px]">account_balance</span>
+</div>
+</div>
+<!-- Card 2: CO -->
+<div class="md:col-span-4 md:row-span-1 bg-on-background p-8 rounded-md flex flex-col justify-between text-white">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-weight="fill">analytics</span>
+<span class="px-3 py-1 bg-primary-container/20 text-primary-container rounded-full text-[10px] font-bold tracking-tight">Finsoft'un Amiral Gemisi</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-3">SAP CO &amp; Material Ledger</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Derinlemesine maliyet analizi ve üretim verimliliği için gelişmiş CO ve ML kurguları.</p>
+</div>
+</div>
+<!-- Card 3: Localization -->
+<div class="md:col-span-4 md:row-span-1 bg-surface-container-highest p-8 rounded-md flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-on-background text-4xl">flag</span>
+<span class="px-3 py-1 bg-on-background/10 text-on-background rounded-full text-[10px] font-bold tracking-tight">Kritik Hizmet</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-background">Türkiye Lokalizasyonu</h3>
+<p class="text-on-secondary-container text-sm leading-relaxed">Mevzuat uyumluluğu, e-Defter, e-Fatura ve beyanname süreçlerinin tam entegrasyonu.</p>
+</div>
+</div>
+<!-- Card 4: Global Rollout -->
+<div class="md:col-span-4 md:row-span-1 bg-surface-container p-8 rounded-md flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">public</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-background">Global Rollout Projeleri</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-white rounded text-[10px] font-semibold text-primary uppercase shadow-sm">Türkiye → Dünya</span>
+<span class="px-2 py-1 bg-white rounded text-[10px] font-semibold text-primary uppercase shadow-sm">Dünya → Türkiye</span>
+</div>
+</div>
+</div>
+<!-- Card 5: S/4HANA -->
+<div class="md:col-span-4 md:row-span-1 bg-surface-container-low p-8 rounded-md flex flex-col justify-between border border-outline-variant/20">
+<div>
+<span class="material-symbols-outlined text-on-background text-4xl mb-4">rocket_launch</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-background">SAP S/4HANA Dönüşüm</h3>
+<p class="text-on-secondary-container text-sm leading-relaxed">Greenfield ve Brownfield yaklaşımlarıyla yeni nesil ERP dünyasına sorunsuz geçiş.</p>
+</div>
+</div>
+<!-- Card 6: PS & BPC -->
+<div class="md:col-span-4 md:row-span-1 bg-surface-container p-8 rounded-md flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-on-background text-4xl mb-4">schema</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-background">SAP PS, IM &amp; BPC</h3>
+<p class="text-on-secondary-container text-sm leading-relaxed">CAPEX/OPEX yönetimi, bütçe planlama ve yatırım süreçlerinin konsolide kontrolü.</p>
+</div>
+</div>
+<!-- Card 7: AMS Support -->
+<div class="md:col-span-4 md:row-span-1 bg-surface-container-low p-8 rounded-md flex flex-col justify-between border border-outline-variant/20">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">support_agent</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-background">SAP Destek (AMS)</h3>
+<div class="space-y-2 text-on-secondary-container text-xs font-medium">
+<p>• 7/24 Kesintisiz Destek</p>
+<p>• SLA Bazlı Müdahale</p>
+<p>• Sabit Danışman Tahsisi</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: LOCALIZATION HIGHLIGHT -->
+<section class="py-24 bg-on-background text-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl font-bold font-headline mb-10">İki Yönlü Lokalizasyon Modeli</h2>
+<div class="space-y-8">
+<div class="flex gap-6 p-6 rounded-md bg-white/5 border-l-4 border-primary transition-all hover:bg-white/10">
+<div class="shrink-0"><span class="material-symbols-outlined text-primary-container text-3xl">download</span></div>
+<div>
+<h4 class="text-xl font-bold mb-2">Türkiye'ye Gelen Firmalar</h4>
+<p class="text-slate-400 text-sm">Yurtdışı merkezli yapıların Türk mevzuatına uyarlanması, tek düzen hesap planı ve yasal raporlama setlerinin kurgulanması.</p>
+</div>
+</div>
+<div class="flex gap-6 p-6 rounded-md bg-white/5 border-l-4 border-primary transition-all hover:bg-white/10">
+<div class="shrink-0"><span class="material-symbols-outlined text-primary-container text-3xl">upload</span></div>
+<div>
+<h4 class="text-xl font-bold mb-2">Yurtdışına Açılan Firmalar</h4>
+<p class="text-slate-400 text-sm">Yerli firmaların global operasyonlarında IFRS uyumlu raporlama ve merkez-şube konsolidasyon süreçlerinin yapılandırılması.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-12 rounded-md border border-primary/20 relative">
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<span class="text-primary-container text-4xl font-bold font-headline">50+</span>
+<p class="text-slate-300 text-xs tracking-widest uppercase font-semibold">Başarılı Lokalizasyon</p>
+</div>
+<div class="space-y-2">
+<span class="text-primary-container text-4xl font-bold font-headline">12</span>
+<p class="text-slate-300 text-xs tracking-widest uppercase font-semibold">Farklı Ülke Deneyimi</p>
+</div>
+<div class="space-y-2">
+<span class="text-primary-container text-4xl font-bold font-headline">%100</span>
+<p class="text-slate-300 text-xs tracking-widest uppercase font-semibold">Mevzuat Uyumluluğu</p>
+</div>
+<div class="space-y-2">
+<span class="text-primary-container text-4xl font-bold font-headline">24h</span>
+<p class="text-slate-300 text-xs tracking-widest uppercase font-semibold">Yasal Güncelleme Takibi</p>
+</div>
+</div>
+<div class="mt-12 pt-12 border-t border-white/10">
+<p class="italic text-slate-400 text-sm">"Finsoft'un lokalizasyon tecrübesi, sadece teknik bir uyarlama değil, aynı zamanda vergi ve denetim dünyasına hakim bir rehberliktir."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: WHY FINSOFT TABLE (Grid) -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-3xl font-bold font-headline text-on-background mb-4">Neden Finsoft?</h2>
+<p class="text-on-secondary-container max-w-xl mx-auto">Biz sadece yazılım kurmuyoruz; finansal operasyonlarınızın mimarisini en doğru standartlarda inşa ediyoruz.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/20 rounded-md overflow-hidden border border-outline-variant/20">
+<div class="bg-white p-10 hover:bg-surface-container-low transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform inline-block">psychology</span>
+<h4 class="font-bold font-headline mb-3 text-on-background">Sektörel Know-How</h4>
+<p class="text-xs text-on-secondary-container leading-relaxed">Üretimden perakendeye, enerjiden finansa kadar geniş bir sektör yelpazesinde özel tecrübe.</p>
+</div>
+<div class="bg-white p-10 hover:bg-surface-container-low transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform inline-block">public</span>
+<h4 class="font-bold font-headline mb-3 text-on-background">Global Standartlar</h4>
+<p class="text-xs text-on-secondary-container leading-relaxed">SAP Best Practices ve global finansal raporlama standartlarına (IFRS/USGAAP) tam uyum.</p>
+</div>
+<div class="bg-white p-10 hover:bg-surface-container-low transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform inline-block">currency_lira</span>
+<h4 class="font-bold font-headline mb-3 text-on-background">Maliyet Optimizasyonu</h4>
+<p class="text-xs text-on-secondary-container leading-relaxed">Süreç iyileştirmeleri ve otomasyonlar ile operasyonel maliyetlerinizi %30'a kadar düşürme.</p>
+</div>
+<div class="bg-white p-10 hover:bg-surface-container-low transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform inline-block">gavel</span>
+<h4 class="font-bold font-headline mb-3 text-on-background">Yasal Güvence</h4>
+<p class="text-xs text-on-secondary-container leading-relaxed">Sürekli güncellenen Türkiye mevzuatına karşı sisteminizi her an güncel ve hazır tutuyoruz.</p>
+</div>
+<div class="bg-white p-10 hover:bg-surface-container-low transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform inline-block">manage_accounts</span>
+<h4 class="font-bold font-headline mb-3 text-on-background">Esnek Kaynak Modeli</h4>
+<p class="text-xs text-on-secondary-container leading-relaxed">İhtiyacınıza göre şekillenen yerinde, uzaktan veya karma danışmanlık modelleri.</p>
+</div>
+<div class="bg-white p-10 hover:bg-surface-container-low transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform inline-block">handshake</span>
+<h4 class="font-bold font-headline mb-3 text-on-background">Uzun Vadeli Ortaklık</h4>
+<p class="text-xs text-on-secondary-container leading-relaxed">Bizim için her proje bir başlangıçtır; yolculuğunuzun her aşamasında yanınızdayız.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: CTA SECTION -->
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary rounded-md p-12 md:p-20 text-center relative overflow-hidden">
+<!-- Abstract BG -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+</div>
+<h2 class="text-3xl md:text-5xl font-bold font-headline text-white mb-8 relative z-10">Hangi Hizmete İhtiyacınız Var?</h2>
+<p class="text-primary-fixed max-w-2xl mx-auto mb-12 text-lg relative z-10">Gelin, işletmenizin finansal süreçlerini beraber analiz edelim ve size en uygun yol haritasını çizelim.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
+<button class="bg-white text-primary px-10 py-4 rounded-md font-bold text-sm hover:bg-surface-container-low transition-colors shadow-xl">
+                        Projenizi Konuşalım
+                    </button>
+<button class="border-2 border-white text-white px-10 py-4 rounded-md font-bold text-sm hover:bg-white/10 transition-colors">
+                        Ücretsiz Danışmanlık Talep Et
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: FOOTER -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-xl font-bold text-slate-900 dark:text-white font-headline mb-6">Finsoft</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">SAP Finans modülleri üzerinde uzmanlaşmış, global standartlarda çözüm sunan butik bir danışmanlık firmasıyız.</p>
+</div>
+<div>
+<h5 class="font-bold text-on-background mb-6 text-sm uppercase tracking-widest">İletişim</h5>
+<ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span>info@finsoft.com.tr</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">phone</span>
+<span>+90 216 504 25 14</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span>Barbaros Mah. Mor Sümbül Sok. No:1 Varyap Meridian, Ataşehir/İstanbul</span>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-on-background mb-6 text-sm uppercase tracking-widest">Hızlı Linkler</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 hover:underline transition-all" href="#">Gizlilik Politikası</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 hover:underline transition-all" href="#">KVKK Aydınlatma Metni</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 hover:underline transition-all" href="#">Çerez Politikası</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-on-background mb-6 text-sm uppercase tracking-widest">Bülten</h5>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">SAP dünyasındaki güncel mevzuat ve yeniliklerden haberdar olun.</p>
+<div class="flex">
+<input class="bg-white dark:bg-slate-900 border border-outline-variant/30 rounded-l px-4 py-2 text-xs w-full focus:ring-1 focus:ring-primary outline-none" placeholder="E-posta adresi" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-r hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-600 dark:text-slate-400 font-label">© 2024 Finsoft SAP Consulting. Tüm Hakları Saklıdır.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">brand_family</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">groups</span></a>
+</div>
+</div>
+</footer>
+</body></html>

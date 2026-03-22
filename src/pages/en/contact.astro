@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/utils';
+const lang = 'en' as const;
+---
+<Layout title="Contact" lang={lang}>
+    <section class="py-32 px-12 bg-surface">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h1 class="display-lg text-5xl font-bold font-headline mb-6">{t('contactTitle', lang)}</h1>
+                <p class="text-xl text-on-surface-variant mb-12">{t('contactDesc', lang)}</p>
+                
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">{t('contactAddress', lang)}</h4>
+                            <p class="text-on-surface-variant text-sm">Barbaros Mah. Mor Sümbül Sok. 5/A Deluxia Palace D:223 Ataşehir, İSTANBUL</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">{t('contactPhone', lang)}</h4>
+                            <p class="text-on-surface-variant text-sm">+90 216 504 25 14</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">{t('contactEmail', lang)}</h4>
+                            <p class="text-on-surface-variant text-sm">info@finsoft.com.tr</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-surface-container-lowest p-10 rounded-xl shadow-lg border border-outline-variant/10">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">{t('contactFormName', lang)}</label>
+                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormNamePh', lang)}>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">{t('contactFormCompany', lang)}</label>
+                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormCompanyPh', lang)}>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">{t('contactFormEmail', lang)}</label>
+                        <input type="email" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormEmailPh', lang)}>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">{t('contactFormType', lang)}</label>
+                        <select class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none">
+                            <option>{t('contactFormOpt1', lang)}</option>
+                            <option>{t('contactFormOpt2', lang)}</option>
+                            <option>{t('contactFormOpt3', lang)}</option>
+                            <option>{t('contactFormOpt4', lang)}</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">{t('contactFormMsg', lang)}</label>
+                        <textarea rows="4" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder={t('contactFormMsgPh', lang)}></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-primary text-on-primary py-4 rounded-md font-bold hover:bg-primary-container transition-colors">{t('contactFormSubmit', lang)}</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</Layout>

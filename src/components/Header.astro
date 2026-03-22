@@ -1,0 +1,92 @@
+---
+import { t, getLocalePath, getAlternateLangPath, type Lang } from '../i18n/utils';
+import type { TranslationKey } from '../i18n/translations';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'tr' } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navItems: { key: TranslationKey; path: string }[] = [
+  { key: 'navHome', path: '/' },
+  { key: 'navServices', path: '/hizmetler' },
+  { key: 'navRollout', path: '/lokalizasyon' },
+  { key: 'navReferences', path: '/referanslar' },
+  { key: 'navAbout', path: '/hakkimizda' },
+  { key: 'navContact', path: '/iletisim' },
+];
+
+function isActivePath(itemPath: string): boolean {
+  const localePath = getLocalePath(itemPath, lang);
+  return currentPath === localePath || currentPath === localePath + '/';
+}
+
+const alternateLangPath = getAlternateLangPath(currentPath, lang);
+const otherLang = lang === 'tr' ? 'EN' : 'TR';
+---
+<nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="main-nav">
+    <div class="flex justify-between items-center px-8 md:px-12 py-3.5 max-w-[1920px] mx-auto">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href={getLocalePath('/', lang)} class="flex items-center group">
+                <img src="/images/finsoft-logo-icon.svg" alt="Finsoft" class="w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+                <div class="-ml-1.5 text-xl font-bold tracking-tight text-on-background font-headline">Finsoft</div>
+            </a>
+        </div>
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+                <a
+                  class={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    isActivePath(item.path)
+                      ? 'text-primary bg-primary/8 font-semibold'
+                      : 'text-on-surface-variant hover:text-on-background hover:bg-surface-container-high/50'
+                  }`}
+                  href={getLocalePath(item.path, lang)}
+                >
+                  {t(item.key, lang)}
+                </a>
+            ))}
+        </div>
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+            <!-- Lang Toggle -->
+            <div class="hidden lg:flex items-center bg-surface-container rounded-full p-0.5 gap-0">
+                {lang === 'tr' ? (
+                    <>
+                        <span class="px-3 py-1.5 rounded-full bg-primary text-white text-xs font-bold tracking-wide">TR</span>
+                        <a href={alternateLangPath} class="px-3 py-1.5 rounded-full text-on-surface-variant text-xs font-bold tracking-wide hover:text-primary transition-colors">EN</a>
+                    </>
+                ) : (
+                    <>
+                        <a href={alternateLangPath} class="px-3 py-1.5 rounded-full text-on-surface-variant text-xs font-bold tracking-wide hover:text-primary transition-colors">TR</a>
+                        <span class="px-3 py-1.5 rounded-full bg-primary text-white text-xs font-bold tracking-wide">EN</span>
+                    </>
+                )}
+            </div>
+            <!-- CTA -->
+            <a href={getLocalePath('/iletisim', lang)} class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary-container hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+                {t('navCta', lang)}
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+  // Shrink header on scroll
+  let lastScroll = 0;
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (nav) {
+      if (scrollY > 50) {
+        nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    }
+    lastScroll = scrollY;
+  });
+</script>

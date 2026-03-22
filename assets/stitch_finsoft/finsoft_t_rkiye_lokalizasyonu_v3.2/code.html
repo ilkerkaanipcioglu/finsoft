@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Türkiye Lokalizasyonu | SAP ARCHITECT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e2e7ff",
+              "surface-container": "#eaedff",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#711419",
+              "inverse-surface": "#283044",
+              "primary-fixed": "#6ffbbe",
+              "on-background": "#131b2e",
+              "primary-container": "#10b981",
+              "on-primary-fixed-variant": "#005236",
+              "inverse-on-surface": "#eef0ff",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#3c4a42",
+              "tertiary-container": "#fc7c78",
+              "surface-container-low": "#f2f3ff",
+              "on-tertiary-fixed-variant": "#842225",
+              "on-secondary-container": "#5c647a",
+              "inverse-primary": "#4edea3",
+              "outline-variant": "#bbcabf",
+              "secondary-container": "#dae2fd",
+              "on-secondary-fixed": "#131b2e",
+              "primary-fixed-dim": "#4edea3",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-variant": "#dae2fd",
+              "surface": "#faf8ff",
+              "primary": "#006c49",
+              "on-secondary-fixed-variant": "#3f465c",
+              "tertiary-fixed": "#ffdad7",
+              "secondary": "#565e74",
+              "on-surface": "#131b2e",
+              "on-primary-fixed": "#002113",
+              "on-tertiary-fixed": "#410005",
+              "background": "#faf8ff",
+              "tertiary-fixed-dim": "#ffb3af",
+              "surface-tint": "#006c49",
+              "surface-dim": "#d2d9f4",
+              "on-primary-container": "#00422b",
+              "secondary-fixed-dim": "#bec6e0",
+              "surface-container-highest": "#dae2fd",
+              "secondary-fixed": "#dae2fd",
+              "outline": "#6c7a71",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary": "#a43a3a",
+              "surface-bright": "#faf8ff"
+            },
+            fontFamily: {
+              "ibm-plex-sans": ["IBM Plex Sans", "sans-serif"],
+              "inter": ["Inter", "sans-serif"],
+              "headline": ["IBM Plex Sans", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tighter text-slate-900">SAP ARCHITECT</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-emerald-500 transition-colors font-inter text-sm" href="#">Ana Sayfa</a>
+<a class="text-emerald-600 border-b-2 border-emerald-500 pb-1 font-inter text-sm" href="#">Hizmetler</a>
+<a class="text-slate-600 hover:text-emerald-500 transition-colors font-inter text-sm" href="#">Uzmanlık</a>
+<a class="text-slate-600 hover:text-emerald-500 transition-colors font-inter text-sm" href="#">Global Projeler</a>
+<a class="text-slate-600 hover:text-emerald-500 transition-colors font-inter text-sm" href="#">Hakkımızda</a>
+<a class="text-slate-600 hover:text-emerald-500 transition-colors font-inter text-sm" href="#">İletişim</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-xs font-medium tracking-wide text-slate-500">
+<span class="relative">TR<span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span></span>
+<span>/</span>
+<span>EN</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-md text-sm font-semibold hover:bg-primary-container transition-all active:scale-95 duration-150">
+                Projenizi Konuşalım
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-24 bg-on-background relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-primary to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="max-w-3xl">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container/20 text-primary-container text-xs font-bold tracking-widest uppercase mb-6 border border-primary-container/30">
+                    TÜRK MEVZUATI UZMANI
+                </span>
+<h1 class="text-5xl md:text-7xl font-ibm-plex-sans font-bold text-white tracking-tight leading-[1.1] mb-8">
+                    Türkiye Lokalizasyonunda Derin Uzmanlık — <span class="text-primary-container">İki Yönde Köprü Kuruyoruz</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-300 font-inter leading-relaxed mb-12 max-w-2xl">
+                    Yabancı şirketlerin Türkiye'ye girişini ve Türk şirketlerin yurtdışına açılmasını SAP üzerinden yönetiyoruz. On yılı aşkın lokalizasyon deneyimiyle, Türkiye mevzuatına tam uyumluluk sağlıyoruz.
+                </p>
+<div class="flex flex-wrap gap-6">
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-md min-w-[240px]">
+<div class="text-primary-container text-3xl font-bold font-ibm-plex-sans mb-1">10+ Yıllık</div>
+<div class="text-slate-400 text-sm font-medium uppercase tracking-wider">Lokalizasyon Deneyimi</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-md min-w-[240px]">
+<div class="text-primary-container text-3xl font-bold font-ibm-plex-sans mb-1">5 Kıta</div>
+<div class="text-slate-400 text-sm font-medium uppercase tracking-wider">Global Rollout</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Way Model Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-3xl font-ibm-plex-sans font-bold text-on-background tracking-tight">İki Yönlü Hizmet Modelimiz</h2>
+<div class="h-1 w-20 bg-primary mt-4"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Card A -->
+<div class="bg-primary-container p-12 rounded-md group hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-white text-5xl mb-8 block" data-icon="arrow_downward">arrow_downward</span>
+<h3 class="text-2xl font-ibm-plex-sans font-bold text-white mb-6">Türkiye'ye Gelen Yabancı Şirketler</h3>
+<p class="text-white/90 font-inter leading-relaxed text-lg">
+                        Global SAP sisteminizi Türkiye mevzuatına uyarlıyoruz. E-Fatura, KDV, yasal raporlama — tüm yerel gereksinimler karşılanır.
+                    </p>
+<div class="mt-8 pt-8 border-t border-white/20">
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-white/80 text-sm">
+<span class="w-1.5 h-1.5 bg-white rounded-full"></span> Mevzuat Analizi &amp; Delta Belirleme
+                            </li>
+<li class="flex items-center gap-3 text-white/80 text-sm">
+<span class="w-1.5 h-1.5 bg-white rounded-full"></span> Local CoA &amp; Global Mapping
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Card B -->
+<div class="bg-on-background p-12 rounded-md group hover:bg-slate-900 transition-colors duration-500">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-8 block" data-icon="arrow_upward">arrow_upward</span>
+<h3 class="text-2xl font-ibm-plex-sans font-bold text-white mb-6">Yurtdışına Açılan Türk Şirketler</h3>
+<p class="text-slate-400 font-inter leading-relaxed text-lg">
+                        Türkiye'deki SAP altyapınızı uluslararası standartlara hazırlıyoruz. Global rollout, yabancı ülke lokalizasyonu ve carve-out projeleri.
+                    </p>
+<div class="mt-8 pt-8 border-t border-white/10">
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> Group Reporting Standards (IFRS)
+                            </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> Multi-Currency &amp; Tax Management
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Services -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 text-center">
+<h2 class="text-4xl font-ibm-plex-sans font-bold text-on-background tracking-tight">Türkiye Lokalizasyon Hizmetlerimiz</h2>
+<p class="text-slate-600 mt-4 font-inter max-w-2xl mx-auto">Mevzuat gereksinimlerinizi modern SAP çözümleriyle uçtan uca dijitalleştiriyoruz.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+<!-- Item 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-md border-b-4 border-primary group hover:translate-y-[-4px] transition-all flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="receipt_long">receipt_long</span>
+<h4 class="text-xl font-bold font-ibm-plex-sans mb-2">E-Fatura</h4>
+<p class="text-sm text-slate-500 font-inter">Gelen ve giden fatura süreçlerinin GİB standartlarında SAP entegrasyonu.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white p-8 rounded-md group hover:bg-secondary-container transition-all flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="menu_book">menu_book</span>
+<h4 class="text-lg font-bold font-ibm-plex-sans mb-2">E-Defter</h4>
+<p class="text-xs text-slate-500 font-inter">Yasal defterlerin elektronik ortamda oluşturulması ve saklanması.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white p-8 rounded-md group hover:bg-secondary-container transition-all flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="local_shipping">local_shipping</span>
+<h4 class="text-lg font-bold font-ibm-plex-sans mb-2">E-İrsaliye</h4>
+<p class="text-xs text-slate-500 font-inter">Lojistik süreçlerin dijital mühürle tam takibi.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-white p-8 rounded-md group hover:bg-secondary-container transition-all flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="currency_lira">currency_lira</span>
+<h4 class="text-lg font-bold font-ibm-plex-sans mb-2">Enflasyon Muhasebesi</h4>
+<p class="text-xs text-slate-500 font-inter">VUK 298-Ç kapsamında güncel finansal düzeltmeler.</p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="bg-white p-8 rounded-md group hover:bg-secondary-container transition-all flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="balance">balance</span>
+<h4 class="text-lg font-bold font-ibm-plex-sans mb-2">KDV İade</h4>
+<p class="text-xs text-slate-500 font-inter">Otomatik raporlama ve iade süreç yönetimi.</p>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="md:col-span-2 bg-on-background p-8 rounded-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-white text-9xl" data-icon="account_balance">account_balance</span>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary-container mb-4 text-3xl" data-icon="account_balance">account_balance</span>
+<h4 class="text-xl font-bold font-ibm-plex-sans mb-2 text-white">Banka Entegrasyonları</h4>
+<p class="text-sm text-slate-400 font-inter">MT940 ve API tabanlı anlık hesap hareketleri ve ödeme emirleri.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Rollout Section -->
+<section class="py-24 bg-on-background">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<h2 class="text-3xl font-ibm-plex-sans font-bold text-white mb-4 tracking-tight">Global Rollout — Merkez Sistemin Ülkelere Adaptasyonu</h2>
+<p class="text-slate-400 font-inter mb-12 max-w-2xl mx-auto">Dünya çapında edindiğimiz tecrübe ile global şablonlarınızı yerel dile ve yasalara çeviriyoruz.</p>
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+<span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium flex items-center gap-2">🇹🇷 Türkiye</span>
+<span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium flex items-center gap-2">🇷🇴 Romanya</span>
+<span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium flex items-center gap-2">🇮🇹 İtalya</span>
+<span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium flex items-center gap-2">🇭🇷 Hırvatistan</span>
+<span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium flex items-center gap-2">🇧🇷 Brezilya</span>
+<span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium flex items-center gap-2">🇺🇦 Ukrayna</span>
+</div>
+<div class="inline-flex items-center gap-3 px-4 py-2 bg-primary/10 border border-primary/20 rounded-md text-primary-container text-sm italic">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+                Pfizer Release 20 &amp; 21 global rollout projeleri kapsamında uygulanmıştır.
+            </div>
+</div>
+</section>
+<!-- Case Study Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-surface-container rounded-md overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/3 bg-slate-200 relative min-h-[300px]">
+<img alt="Industrial Facility" class="w-full h-full object-cover" data-alt="Modern industrial facility exterior architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGvo_KLTFh52AGnGN1KeO6LO9bjRvIxd6ZzStOXbGSFR9a-1mRrTaBXQqg0ULbLQF37zVJcYE7rqr5d51rJkDBfIyc-WMXd4K0ITCbQ6QSe90uKOg3eFuGEAk3FAfRACUMuNtVYQQLTOypWdpmyqr3_OaWEQ0x07ilLBVLK1Tcl2QjYhe2Qlzc--hEEswHgm-qjRWUkv1RvKY4w6Y9W3HXUHoH8rZDPT3d2_6AFaGgHNwZuMANi_xzMOt3Vwomv68tC42w075Xosc"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<div class="md:w-2/3 p-12">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-3xl font-ibm-plex-sans font-bold text-on-background">Wavin Pilsa</h3>
+<p class="text-primary font-bold text-sm tracking-widest uppercase mt-1">Türkiye Lokalizasyonu &amp; Rollout</p>
+</div>
+<span class="bg-white px-4 py-2 rounded-md text-xs font-bold text-slate-500 border border-slate-200">ENDÜSTRİ: İMALAT</span>
+</div>
+<div class="grid md:grid-cols-2 gap-12 mt-10">
+<div>
+<h5 class="font-bold text-sm text-slate-900 uppercase mb-4 tracking-tighter">AKSİYON</h5>
+<p class="text-slate-600 text-sm leading-relaxed">Global SAP template yapısının Türkiye'ye aktarımı, tüm e-dönüşüm süreçlerinin entegrasyonu ve finansal raporlama setinin yerel/global uyumunun sağlanması.</p>
+</div>
+<div>
+<h5 class="font-bold text-sm text-slate-900 uppercase mb-4 tracking-tighter">SONUÇ</h5>
+<p class="text-slate-600 text-sm leading-relaxed">Hatalı raporlama oranında %90 düşüş, aylık kapanış süresinde %40 hızlanma ve GİB denetimlerine %100 hazırlık.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-primary-container">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-12">
+<h2 class="text-4xl font-ibm-plex-sans font-bold text-white tracking-tight max-w-xl">
+                Lokalizasyon Projenizi Konuşalım
+            </h2>
+<button class="bg-on-background text-white px-10 py-5 rounded-md text-lg font-bold hover:bg-slate-900 transition-all active:scale-95 shadow-lg">
+                Ücretsiz Danışmanlık Alın
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200/20 w-full flex flex-col md:flex-row justify-between items-center px-12 py-16">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-slate-900 mb-2">SAP ARCHITECT</div>
+<p class="text-slate-500 text-xs tracking-wide font-inter">© 2024 SAP Architect Consulting. Tüm Hakları Saklıdır.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-emerald-500 transition-colors font-inter text-xs tracking-wide uppercase underline-offset-4 hover:underline" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-emerald-500 transition-colors font-inter text-xs tracking-wide uppercase underline-offset-4 hover:underline" href="#">Twitter</a>
+<a class="text-slate-500 hover:text-emerald-500 transition-colors font-inter text-xs tracking-wide uppercase underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-emerald-500 transition-colors font-inter text-xs tracking-wide uppercase underline-offset-4 hover:underline" href="#">Terms of Service</a>
+</div>
+</footer>
+</body></html>

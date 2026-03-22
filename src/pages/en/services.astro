@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/utils';
+const lang = 'en' as const;
+---
+<Layout title="Services" lang={lang}>
+    <section class="relative pt-40 pb-24 bg-on-background overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="w-full md:w-3/4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-container/20 text-primary-fixed border border-primary-container/30 text-xs font-bold tracking-widest mb-8 uppercase">
+                    {t('svcPageBadge', lang)}
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold font-headline text-white leading-tight tracking-tight mb-8">
+                    {t('svcPageTitle1', lang)}<br/><span class="text-primary-container">{t('svcPageTitle2', lang)}</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed mb-16">{t('svcPageDesc', lang)}</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-md backdrop-blur-sm group hover:border-primary-container/50 transition-all">
+                        <div class="text-4xl font-bold text-white mb-2 font-headline group-hover:text-primary-container transition-colors">{t('svcPageStat1', lang)}</div>
+                        <div class="text-sm font-medium text-slate-400 tracking-wider uppercase">{t('svcPageStat1Label', lang)}</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-md backdrop-blur-sm group hover:border-primary-container/50 transition-all">
+                        <div class="text-4xl font-bold text-white mb-2 font-headline group-hover:text-primary-container transition-colors">{t('svcPageStat2', lang)}</div>
+                        <div class="text-sm font-medium text-slate-400 tracking-wider uppercase">{t('svcPageStat2Label', lang)}</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-md backdrop-blur-sm group hover:border-primary-container/50 transition-all">
+                        <div class="text-4xl font-bold text-white mb-2 font-headline group-hover:text-primary-container transition-colors">{t('svcPageStat3', lang)}</div>
+                        <div class="text-sm font-medium text-slate-400 tracking-wider uppercase">{t('svcPageStat3Label', lang)}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+    </section>
+
+    <section class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-bold font-headline text-on-background mb-4">{t('svcAreaTitle', lang)}</h2>
+                    <div class="h-1.5 w-24 bg-primary"></div>
+                </div>
+                <p class="text-on-secondary-container max-w-md text-sm leading-relaxed">{t('svcAreaDesc', lang)}</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+                <div class="md:col-span-8 md:row-span-2 bg-primary p-10 rounded-md flex flex-col justify-between text-white relative overflow-hidden group">
+                    <div class="relative z-10">
+                        <span class="material-symbols-outlined text-5xl mb-6 group-hover:animate-icon-float">account_balance</span>
+                        <h3 class="text-3xl font-bold font-headline mb-6">{t('svcFiTitle', lang)}</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-white/80 text-sm">
+                            <div class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span><span>{t('svcFiItem1', lang)}</span></div>
+                            <div class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span><span>{t('svcFiItem2', lang)}</span></div>
+                            <div class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span><span>{t('svcFiItem3', lang)}</span></div>
+                            <div class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span><span>{t('svcFiItem4', lang)}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-4 md:row-span-1 bg-on-background p-8 rounded-md flex flex-col justify-between text-white group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="material-symbols-outlined text-primary-container text-4xl group-hover:animate-icon-wiggle">analytics</span>
+                            <span class="px-3 py-1 bg-primary-container/20 text-primary-container rounded-full text-[10px] font-bold tracking-tight">{t('svcCoBadge', lang)}</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline mb-3">{t('svcCoTitle', lang)}</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">{t('svcCoDesc', lang)}</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container-highest p-8 rounded-md flex flex-col justify-between group">
+                    <div>
+                        <span class="material-symbols-outlined text-primary-container text-4xl mb-4 group-hover:animate-icon-wiggle">flag</span>
+                        <h3 class="text-xl font-bold font-headline mb-3 text-on-background">{t('svcLocFullTitle', lang)}</h3>
+                        <p class="text-on-secondary-container text-sm leading-relaxed">{t('svcLocFullDesc', lang)}</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container p-8 rounded-md flex flex-col justify-between group">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:animate-icon-float">public</span>
+                        <h3 class="text-xl font-bold font-headline mb-3 text-on-background">{t('svcRolloutTitle', lang)}</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">{t('svcRolloutDesc', lang)}</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container-low p-8 rounded-md flex flex-col justify-between border border-outline-variant/20 group">
+                    <div>
+                        <span class="material-symbols-outlined text-on-background text-4xl mb-4 group-hover:animate-icon-bounce">rocket_launch</span>
+                        <h3 class="text-xl font-bold font-headline mb-3 text-on-background">{t('svcS4FullTitle', lang)}</h3>
+                        <p class="text-on-secondary-container text-sm leading-relaxed">{t('svcS4FullDesc', lang)}</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container p-8 rounded-md flex flex-col justify-between group">
+                    <div>
+                        <span class="material-symbols-outlined text-on-background text-4xl mb-4 group-hover:animate-icon-wiggle">schema</span>
+                        <h3 class="text-xl font-bold font-headline mb-3 text-on-background">{t('svcPsTitle', lang)}</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">{t('svcPsDesc', lang)}</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 md:row-span-1 bg-surface-container-low p-8 rounded-md flex flex-col justify-between border border-outline-variant/20 group">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:animate-icon-wiggle">engineering</span>
+                        <h3 class="text-xl font-bold font-headline mb-3 text-on-background">{t('svcAmsTitle', lang)}</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-4">{t('svcAmsDesc', lang)}</p>
+                    </div>
+                </div>
+                <!-- Card 8: SAP Cash Management -->
+                <div class="md:col-span-4 md:row-span-1 bg-surface-container p-8 rounded-md flex flex-col justify-between group hover:bg-primary hover:text-white transition-all duration-500 border-t-4 border-primary">
+                    <div>
+                        <span class="material-symbols-outlined text-primary group-hover:text-white text-4xl mb-4 group-hover:animate-icon-float">account_balance_wallet</span>
+                        <h3 class="text-xl font-bold font-headline mb-3 text-on-background group-hover:text-white">SAP Cash Management</h3>
+                        <p class="text-on-surface-variant group-hover:text-white/80 text-sm leading-relaxed">Achieve 100% real-time visibility into global cash assets, automate matching, and generate AI-powered liquidity forecasts.</p>
+                    </div>
+                    <a href="/en/sap-cash-management" class="inline-flex items-center gap-2 font-bold text-sm text-primary group-hover:text-white mt-4 hover:underline underline-offset-4">View Details <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+                <!-- Card 9: SAP TRM -->
+                <div class="md:col-span-12 md:row-span-1 bg-surface-container-highest p-10 rounded-2xl flex flex-col md:flex-row justify-between items-center group hover:bg-primary hover:text-white transition-all duration-500 border border-outline-variant/20 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+                    <div class="md:w-2/3 relative z-10">
+                        <span class="material-symbols-outlined text-primary group-hover:text-white text-5xl mb-4 group-hover:animate-icon-wiggle">monitoring</span>
+                        <h3 class="text-2xl font-bold font-headline mb-3 text-on-background group-hover:text-white">SAP Treasury and Risk Management</h3>
+                        <p class="text-on-surface-variant group-hover:text-white/80 text-sm leading-relaxed md:pr-12">Optimize Working Capital and Achieve up to 30% Increase in Cash Efficiency. Manage liquidity, payments, and risks centrally on the financial data fabric.</p>
+                    </div>
+                    <div class="md:w-1/3 flex md:justify-end mt-8 md:mt-0 relative z-10">
+                        <a href="/en/sap-trm" class="inline-flex items-center gap-2 font-bold text-sm bg-primary text-white group-hover:bg-white group-hover:text-primary px-8 py-4 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">View Details <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="bg-primary rounded-md p-12 md:p-20 text-center relative overflow-hidden">
+                <h2 class="text-3xl md:text-5xl font-bold font-headline text-white mb-8 relative z-10">{t('svcCtaTitle', lang)}</h2>
+                <p class="text-primary-fixed max-w-2xl mx-auto mb-12 text-lg relative z-10">{t('svcCtaDesc', lang)}</p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
+                    <a href="/en/contact" class="bg-white text-primary px-10 py-4 rounded-md font-bold text-sm hover:bg-surface-container-low transition-colors shadow-xl">
+                        {t('navCta', lang)}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

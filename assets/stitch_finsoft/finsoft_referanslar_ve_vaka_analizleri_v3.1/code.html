@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3f465c",
+              "surface-container-highest": "#dae2fd",
+              "tertiary-fixed-dim": "#ffb3af",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#842225",
+              "tertiary-fixed": "#ffdad7",
+              "on-primary-fixed": "#002113",
+              "outline-variant": "#bbcabf",
+              "on-background": "#131b2e",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d2d9f4",
+              "on-secondary-fixed": "#131b2e",
+              "on-primary-fixed-variant": "#005236",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#6ffbbe",
+              "on-primary-container": "#00422b",
+              "inverse-primary": "#4edea3",
+              "background": "#faf8ff",
+              "secondary-fixed": "#dae2fd",
+              "secondary-container": "#dae2fd",
+              "surface-tint": "#006c49",
+              "on-tertiary-container": "#711419",
+              "on-secondary": "#ffffff",
+              "primary-container": "#10b981",
+              "outline": "#6c7a71",
+              "tertiary": "#a43a3a",
+              "surface-container-high": "#e2e7ff",
+              "on-tertiary-fixed": "#410005",
+              "surface-container-low": "#f2f3ff",
+              "on-surface-variant": "#3c4a42",
+              "error-container": "#ffdad6",
+              "surface-container": "#eaedff",
+              "secondary-fixed-dim": "#bec6e0",
+              "primary-fixed-dim": "#4edea3",
+              "surface-bright": "#faf8ff",
+              "primary": "#006c49",
+              "on-surface": "#131b2e",
+              "surface": "#faf8ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#dae2fd",
+              "error": "#ba1a1a",
+              "tertiary-container": "#fc7c78",
+              "secondary": "#565e74",
+              "inverse-on-surface": "#eef0ff",
+              "on-secondary-container": "#5c647a",
+              "on-error": "#ffffff",
+              "inverse-surface": "#283044"
+            },
+            fontFamily: {
+              "headline": ["Work Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "mono": ["IBM Plex Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white">
+                FINSOFT
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Work_Sans'] font-medium text-sm tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="#">Solutions</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="#">Expertise</a>
+<a class="text-emerald-600 dark:text-emerald-400 font-semibold border-b-2 border-emerald-500 pb-1" href="#">References</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors" href="#">Case Studies</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-2 text-xs font-medium tracking-widest text-on-surface-variant">
+<span class="text-primary border-b border-primary">TR</span>
+<span class="opacity-30">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">EN</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary-container transition-all duration-300 scale-95 hover:scale-100">
+                    Projenizi Konuşalım
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-48 md:pb-40 bg-on-background overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block py-1 px-3 bg-primary-container/20 text-primary-container border border-primary-container/30 rounded-full text-[10px] font-bold tracking-widest uppercase mb-6">
+                    KANITLANMIŞ BAŞARI
+                </span>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-white leading-[1.1] tracking-tight mb-8">
+                    100+ Projeyle Yazılan <br/><span class="text-primary-container">Başarı Hikayeleri</span>
+</h1>
+<p class="text-surface-container-highest/70 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-2xl">
+                    Global devlerden yerel liderlere; Pfizer, Aselsan, Ferrero ve Wavin gibi sektör öncüleri finansal dönüşümlerini Finsoft rehberliğinde tamamladı.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-8 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+<div class="text-4xl font-mono font-bold text-primary-container mb-2">100+</div>
+<div class="text-xs font-medium tracking-widest text-surface-container-highest uppercase opacity-60">Tamamlanan Proje</div>
+</div>
+<div class="p-8 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+<div class="text-4xl font-mono font-bold text-primary-container mb-2">10+</div>
+<div class="text-xs font-medium tracking-widest text-surface-container-highest uppercase opacity-60">Uzman Sektör</div>
+</div>
+<div class="p-8 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+<div class="text-4xl font-mono font-bold text-primary-container mb-2">5 Kıta</div>
+<div class="text-xs font-medium tracking-widest text-surface-container-highest uppercase opacity-60">Global Operasyon</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Cases Bento Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline font-bold text-4xl text-on-background tracking-tight mb-4">Seçkin Vaka Analizleri</h2>
+<p class="text-on-surface-variant max-w-xl">Karmaşık finansal süreçlerin teknoloji ile nasıl optimize edildiğini, gerçek başarı metrikleri üzerinden inceleyin.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-3 border border-outline-variant rounded-full hover:bg-white transition-all">
+<span class="material-symbols-outlined text-on-background">arrow_back</span>
+</button>
+<button class="p-3 border border-outline-variant rounded-full hover:bg-white transition-all">
+<span class="material-symbols-outlined text-on-background">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 h-auto md:h-[1200px]">
+<!-- Pfizer Case (Large) -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-primary rounded-xl flex flex-col justify-end p-10 text-on-primary">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay group-hover:scale-105 transition-transform duration-700" data-alt="Modern pharmaceutical laboratory with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkttpdS81JapX_lphBnnFzUMeKwgpvhLc_SiTiZJyErzVMn1AuzTiMDgGSSHheV4XFaPtvswc1PxlJ0OqE8MvdJWs9l-2wlzqRGd-aTb_KjjD6ZIKYX9lA4n2qszUtSUt-2xR8UTvU8ubxkVJtOsoShPFnEAHrgryXbWQBmMAtdxsEZmk_G6jxbIWLr6-jeYckh3XSz4Fj0Ez3bgnbp-SeeozGHqVyEDweE_mcBDzYupdMUv3yP0i4Tnvpg86d33mlvQQ3_CqeDGY"/>
+<div class="relative z-20">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold tracking-widest uppercase">SAĞLIK &amp; İLAÇ</span>
+</div>
+<h3 class="font-headline font-bold text-3xl mb-4 leading-tight">Pfizer Global Rollout &amp; Profitability Analysis</h3>
+<p class="text-on-primary/80 font-light mb-8 max-w-md">5 farklı ülkede eşzamanlı devreye alınan karlılık analiz modelleri ile global finansal konsolidasyon sağlandı.</p>
+<div class="flex gap-6 border-t border-white/20 pt-6">
+<div>
+<div class="text-2xl font-mono font-bold">5</div>
+<div class="text-[10px] uppercase opacity-60">Ülke Kapsamı</div>
+</div>
+<div>
+<div class="text-2xl font-mono font-bold">%100</div>
+<div class="text-[10px] uppercase opacity-60">Görünürlük</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Aselsan Case -->
+<div class="md:col-span-2 md:row-span-1 group relative overflow-hidden bg-on-background rounded-xl p-8 flex flex-col justify-between border border-white/5">
+<div class="flex justify-between items-start">
+<span class="px-3 py-1 bg-primary-container/20 text-primary-container rounded-full text-[10px] font-bold tracking-widest uppercase">SAVUNMA SANAYİ</span>
+<span class="material-symbols-outlined text-primary-container">shield</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-xl text-white mb-2">Aselsan S/4HANA IFRS Transformation</h3>
+<p class="text-surface-container-highest/60 text-sm">Karmaşık IFRS raporlama süreçleri SAP S/4HANA mimarisi ile uçtan uca dijitalleştirildi.</p>
+</div>
+</div>
+<!-- Ferrero Case -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-secondary-container rounded-xl p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="px-3 py-1 bg-white/50 text-on-secondary-container rounded-full text-[10px] font-bold tracking-widest uppercase">HIZLI TÜKETİM</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-xl text-on-secondary-container mb-2">Ferrero VIM &amp; OCR</h3>
+<p class="text-on-secondary-container/70 text-sm">Fatura süreçlerinde %90 otomasyon ile verimlilik artışı.</p>
+</div>
+</div>
+<!-- Wavin Case -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between">
+<div>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold tracking-widest uppercase mb-6 inline-block">YAPI &amp; İNŞAAT</span>
+<h3 class="font-headline font-bold text-xl text-on-background mb-2">Wavin Pilsa Turkey Localization</h3>
+<p class="text-on-surface-variant text-sm">e-Fatura ve e-Defter otomasyonu ile tam uyumluluk.</p>
+</div>
+<span class="material-symbols-outlined text-primary self-end">receipt_long</span>
+</div>
+<!-- Philip Morris -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-white border border-outline-variant/30 rounded-xl p-8 flex flex-col justify-between shadow-sm">
+<h3 class="font-headline font-bold text-lg mb-2">Philip Morris Actual Costing</h3>
+<p class="text-on-surface-variant text-sm">Üretim maliyetlerinin gerçek zamanlı takibi ve varyans analizi.</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 text-primary font-bold text-xs">DETAYLI İNCELE →</div>
+</div>
+<!-- YapıKredi -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-surface-container rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="text-3xl font-mono font-bold text-primary mb-2">3 ➔ 1</div>
+<h3 class="font-headline font-bold text-lg mb-1">Yapıkredi Sigorta</h3>
+<p class="text-on-surface-variant text-xs">Dönem kapama süresi 3 günden 1 güne indirildi.</p>
+</div>
+</div>
+<!-- Lonza Case -->
+<div class="md:col-span-2 md:row-span-1 group relative overflow-hidden bg-on-background rounded-xl p-10 flex items-center gap-10">
+<div class="flex-1">
+<span class="px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-[10px] font-bold tracking-widest uppercase mb-4 inline-block">GLOBAL CARVE-OUT</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-4">Lonza LSI Global Carve-Out</h3>
+<p class="text-surface-container-highest/60 text-sm leading-relaxed">US, Brezilya ve Çin operasyonlarını kapsayan devasa bir finansal ayrışma projesinin teknik liderliği.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-white/20 text-8xl" style="font-variation-settings: 'wght' 200;">public</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Portfolio / Tag Cloud -->
+<section class="py-24 bg-on-background relative overflow-hidden">
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline font-bold text-3xl text-white mb-4">Geniş Müşteri Ekosistemi</h2>
+<div class="w-16 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h3 class="text-primary-container font-mono text-sm tracking-[0.2em] uppercase mb-8 flex items-center gap-4">
+<span class="w-2 h-2 bg-primary-container rounded-full"></span>
+                        Finansal Dönüşüm Projeleri
+                    </h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Nestle</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Ülker</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Hayat Holding</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Eczacıbaşı</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Ford Otosan</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Migros</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Anadolu Efes</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Brisa</span>
+</div>
+</div>
+<div>
+<h3 class="text-primary-container font-mono text-sm tracking-[0.2em] uppercase mb-8 flex items-center gap-4">
+<span class="w-2 h-2 bg-primary-container rounded-full"></span>
+                        Lojistik &amp; Entegrasyon
+                    </h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Borusan Lojistik</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Getir</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Arçelik</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Trendyol</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Turkcell</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Enerjisa</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Tüpraş</span>
+<span class="px-5 py-3 bg-white/5 border border-white/10 text-white/70 rounded-md text-sm hover:bg-white/10 transition-all cursor-default">Sabancı Dx</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sector Expertise Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline font-bold text-4xl text-on-background mb-4">Sektörel Uzmanlık Alanlarımız</h2>
+<p class="text-on-surface-variant">Her sektörün finansal dili farklıdır. Biz bu dili konuşuyoruz.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Healthcare -->
+<div class="bg-white p-10 rounded-xl hover:shadow-xl hover:shadow-on-surface/5 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform group-hover:scale-110">local_hospital</span>
+<h3 class="font-headline font-bold text-xl mb-3">Sağlık &amp; İlaç</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Global bütçe kontrolü ve karlılık analizleri. Örn: Pfizer Global Projeleri.</p>
+</div>
+<!-- Defense -->
+<div class="bg-white p-10 rounded-xl hover:shadow-xl hover:shadow-on-surface/5 transition-all group border-t-4 border-primary">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform group-hover:scale-110">security</span>
+<h3 class="font-headline font-bold text-xl mb-3">Savunma Sanayi</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Karmaşık maliyet yapıları ve IFRS uyumluluğu. Örn: Aselsan S/4HANA.</p>
+</div>
+<!-- FMCG -->
+<div class="bg-white p-10 rounded-xl hover:shadow-xl hover:shadow-on-surface/5 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform group-hover:scale-110">shopping_bag</span>
+<h3 class="font-headline font-bold text-xl mb-3">Hızlı Tüketim (FMCG)</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">VIM otomasyonu ve tedarik zinciri finansmanı. Örn: Ferrero, Nestle.</p>
+</div>
+<!-- Energy -->
+<div class="bg-white p-10 rounded-xl hover:shadow-xl hover:shadow-on-surface/5 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform group-hover:scale-110">bolt</span>
+<h3 class="font-headline font-bold text-xl mb-3">Enerji</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Unbundling süreçleri ve regülasyon uyumu. Örn: SEDAŞ, Enerjisa.</p>
+</div>
+<!-- Automotive -->
+<div class="bg-white p-10 rounded-xl hover:shadow-xl hover:shadow-on-surface/5 transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform group-hover:scale-110">car_repair</span>
+<h3 class="font-headline font-bold text-xl mb-3">Otomotiv</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Actual costing ve üretim verimlilik takibi. Örn: Ford Otosan, Brisa.</p>
+</div>
+<!-- Finance -->
+<div class="bg-white p-10 rounded-xl hover:shadow-xl hover:shadow-on-surface/5 transition-all group border-b-4 border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 transition-transform group-hover:scale-110">account_balance</span>
+<h3 class="font-headline font-bold text-xl mb-3">Finans &amp; Sigorta</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Dönem kapama optimizasyonu ve konsolidasyon. Örn: Yapıkredi Sigorta.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="bg-primary rounded-[2rem] p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container/40 to-transparent pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl text-white mb-8 tracking-tight">Siz de Bu Başarı Listesinde Yer Alın</h2>
+<p class="text-on-primary/70 text-lg mb-12">SAP finansal süreçlerinizi dünya standartlarında bir uzmanlıkla yeniden kurgulayalım.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-white text-primary px-10 py-5 rounded-md font-bold text-lg hover:bg-surface-container-highest transition-all shadow-xl">
+                        Projenizi Konuşalım
+                    </button>
+<button class="bg-transparent border border-white/30 text-white px-10 py-5 rounded-md font-bold text-lg hover:bg-white/10 transition-all">
+                        Tüm Çözümlerimiz
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto font-['Inter'] text-sm leading-relaxed">
+<div class="md:col-span-1">
+<span class="text-xl font-bold text-slate-900 dark:text-white mb-4 block">FINSOFT</span>
+<p class="text-slate-500 dark:text-slate-400">SAP Finansal çözümlerde Türkiye'nin ve bölgenin lider danışmanlık ortağı.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-bold text-on-background mb-6">Ofis</h4>
+<p class="text-slate-500 dark:text-slate-400 mb-2">Ataşehir Office: Barbaros Mah. No:1</p>
+<p class="text-slate-500 dark:text-slate-400">+90 216 Finsoft</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-bold text-on-background mb-6">Navigasyon</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 hover:underline decoration-emerald-500 underline-offset-4 transition-all" href="#">Solutions</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 hover:underline decoration-emerald-500 underline-offset-4 transition-all" href="#">Case Studies</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 hover:underline decoration-emerald-500 underline-offset-4 transition-all" href="#">Expertise</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-bold text-on-background mb-6">Sosyal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 hover:underline decoration-emerald-500 underline-offset-4 transition-all" href="#">LinkedIn</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 hover:underline decoration-emerald-500 underline-offset-4 transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-xs">
+<p>© 2024 Finsoft SAP Consulting. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/utils';
+const lang = 'en' as const;
+---
+<Layout title="About Us" lang={lang}>
+    <section class="py-32 px-12 bg-surface">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="display-lg text-5xl font-bold font-headline mb-8">{t('aboutTitle', lang)}</h1>
+            <div class="prose prose-lg dark:prose-invert">
+                <p>{t('aboutP1', lang)}</p>
+                <p>{t('aboutP2', lang)}</p>
+                <p>{t('aboutP3', lang)}</p>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                    <h3 class="text-2xl font-bold font-headline mb-4">{t('aboutMission', lang)}</h3>
+                    <p class="text-on-surface-variant">{t('aboutMissionDesc', lang)}</p>
+                </div>
+                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                    <h3 class="text-2xl font-bold font-headline mb-4">{t('aboutVision', lang)}</h3>
+                    <p class="text-on-surface-variant">{t('aboutVisionDesc', lang)}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
