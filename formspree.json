@@ -3,7 +3,7 @@
     "contactForm": {
       "name": "Finsoft İletişim Formu",
       "actions": [
-        { "type": "email", "to": "info@finsoft.com.tr" }
+        { "type": "email", "to": "ilkerkaan@gmail.com" }
       ],
       "fields": {
         "name": {
