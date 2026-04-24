@@ -1,0 +1,32 @@
+{
+  "forms": {
+    "contactForm": {
+      "name": "Finsoft İletişim Formu",
+      "actions": [
+        { "type": "email", "to": "info@finsoft.com.tr" }
+      ],
+      "fields": {
+        "name": {
+          "required": true,
+          "type": "text"
+        },
+        "company": {
+          "required": false,
+          "type": "text"
+        },
+        "email": {
+          "required": true,
+          "type": "email"
+        },
+        "projectType": {
+          "required": true,
+          "type": "text"
+        },
+        "message": {
+          "required": true,
+          "type": "text"
+        }
+      }
+    }
+  }
+}

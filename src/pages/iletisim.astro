@@ -40,37 +40,123 @@ import Layout from '../layouts/Layout.astro';
             </div>
             
             <div class="bg-surface-container-lowest p-10 rounded-xl shadow-lg border border-outline-variant/10">
-                <form class="space-y-6">
+                <!-- Contact Form -->
+                <form id="finsoft-contact-form" action="https://formspree.io/p/2986949961272262178/f/contactForm" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-bold mb-2">Ad Soyad</label>
-                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Adınız Soyadınız">
+                            <label for="name" class="block text-sm font-bold mb-2">Ad Soyad</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none transition-shadow" placeholder="Adınız Soyadınız">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold mb-2">Şirket</label>
-                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Şirketiniz">
+                            <label for="company" class="block text-sm font-bold mb-2">Şirket</label>
+                            <input type="text" id="company" name="company" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none transition-shadow" placeholder="Şirketiniz">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">E-posta</label>
-                        <input type="email" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="kurumsal@email.com">
+                        <label for="email" class="block text-sm font-bold mb-2">E-posta</label>
+                        <input type="email" id="email" name="email" required class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none transition-shadow" placeholder="kurumsal@email.com">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">Projenizin Türü</label>
-                        <select class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none">
-                            <option>Global Rollout — Türkiye Lokalizasyonu</option>
-                            <option>Türk Şirket Yurtdışı Rollout</option>
-                            <option>SAP FI/CO Danışmanlığı</option>
-                            <option>SAP S/4HANA Dönüşüm</option>
+                        <label for="projectType" class="block text-sm font-bold mb-2">Projenizin Türü</label>
+                        <select id="projectType" name="projectType" required class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none transition-shadow">
+                            <option value="">Seçiniz...</option>
+                            <option value="Global Rollout — Türkiye Lokalizasyonu">Global Rollout — Türkiye Lokalizasyonu</option>
+                            <option value="Türk Şirket Yurtdışı Rollout">Türk Şirket Yurtdışı Rollout</option>
+                            <option value="SAP FI/CO Danışmanlığı">SAP FI/CO Danışmanlığı</option>
+                            <option value="SAP S/4HANA Dönüşüm">SAP S/4HANA Dönüşüm</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2">Mesaj</label>
-                        <textarea rows="4" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Proje detaylarınızı kısaca anlatın..."></textarea>
+                        <label for="message" class="block text-sm font-bold mb-2">Mesaj</label>
+                        <textarea rows="4" id="message" name="message" required class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none transition-shadow" placeholder="Proje detaylarınızı kısaca anlatın..."></textarea>
                     </div>
-                    <button type="button" class="w-full bg-primary text-on-primary py-4 rounded-md font-bold hover:bg-primary-container transition-colors">Gönder</button>
+                    <button type="submit" id="submit-btn" class="w-full bg-primary text-on-primary py-4 rounded-md font-bold hover:bg-primary-container transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer">
+                        <span id="btn-text">Gönder</span>
+                        <!-- Loading spinner -->
+                        <svg id="btn-spinner" class="hidden animate-spin h-5 w-5 text-on-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                        </svg>
+                    </button>
                 </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div id="success-message" class="hidden text-center py-12 space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-primary/10 rounded-full flex items-center justify-center animate-scale-in">
+                        <span class="material-symbols-outlined text-primary text-4xl">check_circle</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-headline text-on-surface">Mesajınız İletildi!</h3>
+                    <p class="text-on-surface-variant">En kısa sürede size dönüş yapacağız.</p>
+                    <button id="reset-btn" class="mt-4 text-primary font-bold hover:underline cursor-pointer">Yeni Mesaj Gönder</button>
+                </div>
+
+                <!-- Error Message (hidden by default) -->
+                <div id="error-message" class="hidden mt-4 p-4 bg-error-container rounded-md text-on-error-container text-sm font-medium flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">error</span>
+                    <span>Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan <a href="mailto:info@finsoft.com.tr" class="underline font-bold">info@finsoft.com.tr</a> adresine e-posta gönderin.</span>
+                </div>
             </div>
         </div>
     </section>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('finsoft-contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    const resetBtn = document.getElementById('reset-btn');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Reset error state
+      errorMessage?.classList.add('hidden');
+      
+      // Show loading state
+      if (submitBtn) submitBtn.disabled = true;
+      btnText?.classList.add('opacity-0');
+      btnSpinner?.classList.remove('hidden');
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          // Show success
+          form.classList.add('hidden');
+          successMessage?.classList.remove('hidden');
+        } else {
+          const data = await response.json();
+          throw new Error(data?.errors?.map(e => e.message).join(', ') || 'Gönderim başarısız.');
+        }
+      } catch (err) {
+        errorMessage?.classList.remove('hidden');
+        console.error('Formspree submission error:', err);
+      } finally {
+        // Reset button state
+        if (submitBtn) submitBtn.disabled = false;
+        btnText?.classList.remove('opacity-0');
+        btnSpinner?.classList.add('hidden');
+      }
+    });
+
+    // Reset form handler
+    resetBtn?.addEventListener('click', () => {
+      form.reset();
+      form.classList.remove('hidden');
+      successMessage?.classList.add('hidden');
+      errorMessage?.classList.add('hidden');
+    });
+  });
+</script>
